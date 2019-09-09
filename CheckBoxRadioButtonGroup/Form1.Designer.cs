@@ -34,11 +34,11 @@
             this.checkBoxUnterStrichen = new System.Windows.Forms.CheckBox();
             this.checkBoxDurchgestrichen = new System.Windows.Forms.CheckBox();
             this.groupBoxHintergrund = new System.Windows.Forms.GroupBox();
-            this.radioButtonHhellgruen = new System.Windows.Forms.RadioButton();
-            this.radioButtonHhellblau = new System.Windows.Forms.RadioButton();
-            this.radioButtonHrosa = new System.Windows.Forms.RadioButton();
-            this.radioButtonHgelb = new System.Windows.Forms.RadioButton();
             this.radioButtonHanthrazit = new System.Windows.Forms.RadioButton();
+            this.radioButtonHgelb = new System.Windows.Forms.RadioButton();
+            this.radioButtonHrosa = new System.Windows.Forms.RadioButton();
+            this.radioButtonHhellblau = new System.Windows.Forms.RadioButton();
+            this.radioButtonHhellgruen = new System.Windows.Forms.RadioButton();
             this.groupBoxSchrift = new System.Windows.Forms.GroupBox();
             this.radioButtonSweiss = new System.Windows.Forms.RadioButton();
             this.radioButtonSviolett = new System.Windows.Forms.RadioButton();
@@ -52,7 +52,7 @@
             // buttonClose
             // 
             this.buttonClose.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(329, 123);
+            this.buttonClose.Location = new System.Drawing.Point(341, 134);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(87, 36);
             this.buttonClose.TabIndex = 0;
@@ -118,16 +118,38 @@
             this.groupBoxHintergrund.TabStop = false;
             this.groupBoxHintergrund.Text = "Hintergrundfarbe";
             // 
-            // radioButtonHhellgruen
+            // radioButtonHanthrazit
             // 
-            this.radioButtonHhellgruen.AutoSize = true;
-            this.radioButtonHhellgruen.Location = new System.Drawing.Point(6, 19);
-            this.radioButtonHhellgruen.Name = "radioButtonHhellgruen";
-            this.radioButtonHhellgruen.Size = new System.Drawing.Size(68, 17);
-            this.radioButtonHhellgruen.TabIndex = 0;
-            this.radioButtonHhellgruen.Text = "hellgruen";
-            this.radioButtonHhellgruen.UseVisualStyleBackColor = true;
-            this.radioButtonHhellgruen.CheckedChanged += new System.EventHandler(this.RadioButtonHhellgruen_CheckedChanged);
+            this.radioButtonHanthrazit.AutoSize = true;
+            this.radioButtonHanthrazit.Location = new System.Drawing.Point(6, 111);
+            this.radioButtonHanthrazit.Name = "radioButtonHanthrazit";
+            this.radioButtonHanthrazit.Size = new System.Drawing.Size(65, 17);
+            this.radioButtonHanthrazit.TabIndex = 4;
+            this.radioButtonHanthrazit.Text = "anthrazit";
+            this.radioButtonHanthrazit.UseVisualStyleBackColor = true;
+            this.radioButtonHanthrazit.CheckedChanged += new System.EventHandler(this.RadioButtonHanthrazit_CheckedChanged);
+            // 
+            // radioButtonHgelb
+            // 
+            this.radioButtonHgelb.AutoSize = true;
+            this.radioButtonHgelb.Location = new System.Drawing.Point(6, 88);
+            this.radioButtonHgelb.Name = "radioButtonHgelb";
+            this.radioButtonHgelb.Size = new System.Drawing.Size(45, 17);
+            this.radioButtonHgelb.TabIndex = 3;
+            this.radioButtonHgelb.Text = "gelb";
+            this.radioButtonHgelb.UseVisualStyleBackColor = true;
+            this.radioButtonHgelb.CheckedChanged += new System.EventHandler(this.RadioButtonHgelb_CheckedChanged);
+            // 
+            // radioButtonHrosa
+            // 
+            this.radioButtonHrosa.AutoSize = true;
+            this.radioButtonHrosa.Location = new System.Drawing.Point(6, 65);
+            this.radioButtonHrosa.Name = "radioButtonHrosa";
+            this.radioButtonHrosa.Size = new System.Drawing.Size(45, 17);
+            this.radioButtonHrosa.TabIndex = 2;
+            this.radioButtonHrosa.Text = "rosa";
+            this.radioButtonHrosa.UseVisualStyleBackColor = true;
+            this.radioButtonHrosa.CheckedChanged += new System.EventHandler(this.RadioButtonHrosa_CheckedChanged);
             // 
             // radioButtonHhellblau
             // 
@@ -142,38 +164,16 @@
             this.radioButtonHhellblau.UseVisualStyleBackColor = true;
             this.radioButtonHhellblau.CheckedChanged += new System.EventHandler(this.RadioButtonHhellblau_CheckedChanged);
             // 
-            // radioButtonHrosa
+            // radioButtonHhellgruen
             // 
-            this.radioButtonHrosa.AutoSize = true;
-            this.radioButtonHrosa.Location = new System.Drawing.Point(6, 65);
-            this.radioButtonHrosa.Name = "radioButtonHrosa";
-            this.radioButtonHrosa.Size = new System.Drawing.Size(45, 17);
-            this.radioButtonHrosa.TabIndex = 2;
-            this.radioButtonHrosa.Text = "rosa";
-            this.radioButtonHrosa.UseVisualStyleBackColor = true;
-            this.radioButtonHrosa.CheckedChanged += new System.EventHandler(this.RadioButtonHrosa_CheckedChanged);
-            // 
-            // radioButtonHgelb
-            // 
-            this.radioButtonHgelb.AutoSize = true;
-            this.radioButtonHgelb.Location = new System.Drawing.Point(6, 88);
-            this.radioButtonHgelb.Name = "radioButtonHgelb";
-            this.radioButtonHgelb.Size = new System.Drawing.Size(45, 17);
-            this.radioButtonHgelb.TabIndex = 3;
-            this.radioButtonHgelb.Text = "gelb";
-            this.radioButtonHgelb.UseVisualStyleBackColor = true;
-            this.radioButtonHgelb.CheckedChanged += new System.EventHandler(this.RadioButtonHgelb_CheckedChanged);
-            // 
-            // radioButtonHanthrazit
-            // 
-            this.radioButtonHanthrazit.AutoSize = true;
-            this.radioButtonHanthrazit.Location = new System.Drawing.Point(6, 111);
-            this.radioButtonHanthrazit.Name = "radioButtonHanthrazit";
-            this.radioButtonHanthrazit.Size = new System.Drawing.Size(65, 17);
-            this.radioButtonHanthrazit.TabIndex = 4;
-            this.radioButtonHanthrazit.Text = "anthrazit";
-            this.radioButtonHanthrazit.UseVisualStyleBackColor = true;
-            this.radioButtonHanthrazit.CheckedChanged += new System.EventHandler(this.RadioButtonHanthrazit_CheckedChanged);
+            this.radioButtonHhellgruen.AutoSize = true;
+            this.radioButtonHhellgruen.Location = new System.Drawing.Point(6, 19);
+            this.radioButtonHhellgruen.Name = "radioButtonHhellgruen";
+            this.radioButtonHhellgruen.Size = new System.Drawing.Size(68, 17);
+            this.radioButtonHhellgruen.TabIndex = 0;
+            this.radioButtonHhellgruen.Text = "hellgruen";
+            this.radioButtonHhellgruen.UseVisualStyleBackColor = true;
+            this.radioButtonHhellgruen.CheckedChanged += new System.EventHandler(this.RadioButtonHhellgruen_CheckedChanged);
             // 
             // groupBoxSchrift
             // 
@@ -250,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 168);
+            this.ClientSize = new System.Drawing.Size(440, 182);
             this.Controls.Add(this.groupBoxSchrift);
             this.Controls.Add(this.groupBoxHintergrund);
             this.Controls.Add(this.checkBoxDurchgestrichen);

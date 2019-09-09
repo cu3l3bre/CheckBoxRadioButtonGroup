@@ -27,13 +27,13 @@ namespace CheckBoxRadioButtonGroup
         }
 
 
-
+        // Buttons
         private void ButtonClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-
+        // Radio Buttons für Hintergrundfarbe
         private void RadioButtonHhellgruen_CheckedChanged(object sender, EventArgs e)
         {
             setHintergrundFarbe(Color.LightGreen);
@@ -61,7 +61,7 @@ namespace CheckBoxRadioButtonGroup
         }
 
 
-
+        // Radio Buttons für Schriftfarbe
         private void RadioButtonSBlau_CheckedChanged(object sender, EventArgs e)
         {
             setSchriftFarbe(Color.Blue);
@@ -89,7 +89,7 @@ namespace CheckBoxRadioButtonGroup
 
 
 
-
+        // Methode zum Setzen der Hintergrundfarbe des Hauptfensters
         private void setHintergrundFarbe(Color farbe)
         {
             if (farbe == Color.Yellow)
@@ -105,6 +105,7 @@ namespace CheckBoxRadioButtonGroup
         }
 
 
+        // Methode zum Setzen der Schriftfarbe
         private void setSchriftFarbe(Color farbe)
         {
 
@@ -135,41 +136,38 @@ namespace CheckBoxRadioButtonGroup
             checkBoxDurchgestrichen.ForeColor = farbe;
         }
 
-
+        // Methode zum Setzen des Fonts
         private void setFont(object sender, EventArgs e)
         {
+            //System.Drawing.FontStyle.Regular == 0;
+            //System.Drawing.FontStyle.Bold == 1;
+            //System.Drawing.FontStyle.Italic == 2;
+            //System.Drawing.FontStyle.Underline == 4;
+            //System.Drawing.FontStyle.Strikeout == 8
+
             int style = 0;
 
-            /*
-            System.Drawing.FontStyle.Regular == 0;
-            System.Drawing.FontStyle.Bold == 1;
-            System.Drawing.FontStyle.Italic == 2;
-            System.Drawing.FontStyle.Underline == 4;
-            System.Drawing.FontStyle.Strikeout == 8
-              */  
-                
-     
-            if(checkBoxFett.Checked)
+            if (checkBoxFett.Checked)
             {
                 style += 1;
             }
 
-            if(checkBoxKursiv.Checked)
+            if (checkBoxKursiv.Checked)
             {
                 style += 2;
             }
 
-            if(checkBoxUnterStrichen.Checked)
+            if (checkBoxUnterStrichen.Checked)
             {
                 style += 4;
             }
 
-            if(checkBoxDurchgestrichen.Checked)
+            if (checkBoxDurchgestrichen.Checked)
             {
                 style += 8;
             }
 
-            Font fontAll = new System.Drawing.Font("Calibri", 11.25F, (System.Drawing.FontStyle)style);
+            Font fontAll = new System.Drawing.Font("Calibri", 11.0F, (System.Drawing.FontStyle)style);
 
             buttonClose.Font = fontAll;
 
@@ -191,6 +189,5 @@ namespace CheckBoxRadioButtonGroup
             radioButtonSweiss.Font = fontAll;
 
         }
-
     }
 }
