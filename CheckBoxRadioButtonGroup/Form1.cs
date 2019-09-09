@@ -145,7 +145,8 @@ namespace CheckBoxRadioButtonGroup
             //System.Drawing.FontStyle.Underline == 4;
             //System.Drawing.FontStyle.Strikeout == 8
 
-            int style = 0;
+            byte style = 0;
+           // byte test = 0b1111;
 
             if (checkBoxFett.Checked)
             {
