@@ -118,22 +118,28 @@ namespace CheckBoxRadioButtonGroup
                 radioButtonHgelb.Enabled = true;
             }
 
-            radioButtonSblau.ForeColor = farbe;
-            radioButtonSrot.ForeColor = farbe;
-            radioButtonSgelb.ForeColor = farbe;
-            radioButtonSviolett.ForeColor = farbe;
-            radioButtonSweiss.ForeColor = farbe;
+            //radioButtonSblau.ForeColor = farbe;
+            //radioButtonSrot.ForeColor = farbe;
+            //radioButtonSgelb.ForeColor = farbe;
+            //radioButtonSviolett.ForeColor = farbe;
+            //radioButtonSweiss.ForeColor = farbe;
             
-            radioButtonHhellgruen.ForeColor = farbe;
-            radioButtonHhellblau.ForeColor = farbe;
-            radioButtonHrosa.ForeColor = farbe;
-            radioButtonHgelb.ForeColor = farbe;
-            radioButtonHanthrazit.ForeColor = farbe;
+            //radioButtonHhellgruen.ForeColor = farbe;
+            //radioButtonHhellblau.ForeColor = farbe;
+            //radioButtonHrosa.ForeColor = farbe;
+            //radioButtonHgelb.ForeColor = farbe;
+            //radioButtonHanthrazit.ForeColor = farbe;
 
-            checkBoxFett.ForeColor = farbe;
-            checkBoxKursiv.ForeColor = farbe;
-            checkBoxUnterStrichen.ForeColor = farbe;
-            checkBoxDurchgestrichen.ForeColor = farbe;
+            //checkBoxFett.ForeColor = farbe;
+            //checkBoxKursiv.ForeColor = farbe;
+            //checkBoxUnterStrichen.ForeColor = farbe;
+            //checkBoxDurchgestrichen.ForeColor = farbe;
+
+
+            // so ist es kürzer, da die untergeordneten sachen, von der übergeordneten übernehmen
+            this.ForeColor = farbe;
+
+
         }
 
         // Methode zum Setzen des Fonts
@@ -146,29 +152,57 @@ namespace CheckBoxRadioButtonGroup
             //System.Drawing.FontStyle.Strikeout == 8
 
             byte style = 0;
-           // byte test = 0b1111;
+            // byte test = 0b1111;
+
+            FontStyle test = 0; // macht doch mehr sinn lol... brauch ich unten nicht casten
+            FontStyle styleToSet = FontStyle.Regular; // nch besser ist das so
 
             if (checkBoxFett.Checked)
             {
                 style += 1;
+                test += 1;
+
+                styleToSet = FontStyle.Bold;
+
             }
 
             if (checkBoxKursiv.Checked)
             {
                 style += 2;
+                test += 2;
+
+                styleToSet |= FontStyle.Italic; // bitweises Ver-ODEREN
+
             }
 
             if (checkBoxUnterStrichen.Checked)
             {
                 style += 4;
+                test += 4;
+
+                styleToSet |= FontStyle.Underline;
             }
 
             if (checkBoxDurchgestrichen.Checked)
             {
                 style += 8;
+                test += 8;
+
+                styleToSet |= FontStyle.Strikeout;
             }
 
-            Font fontAll = new System.Drawing.Font("Calibri", 11.0F, (System.Drawing.FontStyle)style);
+
+
+
+
+
+
+
+
+
+           // Font fontAll = new System.Drawing.Font("Calibri", 11.25F, (System.Drawing.FontStyle)style);
+           // Font fontAll = new System.Drawing.Font("Calibri", 11.25F, test);
+            Font fontAll = new System.Drawing.Font("Calibri", 11.25F, styleToSet); // noch besser ist das so
 
             buttonClose.Font = fontAll;
 
@@ -188,6 +222,13 @@ namespace CheckBoxRadioButtonGroup
             radioButtonSgelb.Font = fontAll;
             radioButtonSviolett.Font = fontAll;
             radioButtonSweiss.Font = fontAll;
+
+            // wie oben auch,kann ich das font vom hauptfenster nehmen
+            // da die anderen untergeordneten sachen, die font vom hauptfenster übernehmen
+            // falls die default werte noch nicht geändert wurden
+
+            //this.Font = fontAll;
+
 
         }
     }
