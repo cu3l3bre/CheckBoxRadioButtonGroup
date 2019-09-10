@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonClose = new System.Windows.Forms.Button();
             this.checkBoxFett = new System.Windows.Forms.CheckBox();
             this.checkBoxKursiv = new System.Windows.Forms.CheckBox();
@@ -45,6 +46,7 @@
             this.radioButtonSgelb = new System.Windows.Forms.RadioButton();
             this.radioButtonSrot = new System.Windows.Forms.RadioButton();
             this.radioButtonSblau = new System.Windows.Forms.RadioButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBoxHintergrund.SuspendLayout();
             this.groupBoxSchrift.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +59,7 @@
             this.buttonClose.Size = new System.Drawing.Size(87, 36);
             this.buttonClose.TabIndex = 0;
             this.buttonClose.Text = "Close";
+            this.toolTip1.SetToolTip(this.buttonClose, "Programm beenden");
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
@@ -289,6 +292,7 @@
         private System.Windows.Forms.RadioButton radioButtonSgelb;
         private System.Windows.Forms.RadioButton radioButtonSrot;
         private System.Windows.Forms.RadioButton radioButtonSblau;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
